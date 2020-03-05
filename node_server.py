@@ -213,6 +213,8 @@ def mine_unconfirmed_transactions():
     # global function variable
     result = blockchain.mine()
     try:
+        # added functions to display current and previous
+        # block hashes via the mine endpoint
         last_block = blockchain.last_block.previous_hash
         current_block = blockchain.get_current_block()
 
